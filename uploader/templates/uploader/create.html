@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ancient</title>
+		{% block extrahead %}
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="static/css/op.css">
+		{% endblock %}
+    </head>
+    <body style="background-image: url(media/mp3/im.jpg)">
+        <div class="hero">
+            <!-- <nav>
+                <h1></h1>
+                <h1></h1>
+                <h1></h1>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                </ul>
+            </nav> -->
+            <h1 class="title">TAMIL ANCIENT TEXT RECOGNITION</h1>
+            <br>
+            <br>
+            
+            <div class="container">
+                <p style="color: aliceblue;">Please upload ancient text image</p>
+                
+            
+            <br>
+            <br>
+            <div class="jumbotron" >
+				<div id="rect">
+            
+                <form method="post" enctype="multipart/form-data">
+                    <!-- {% block replace %} -->
+					{% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+               
+                <button class="btn">Result</button>
+                </form>
+                <!-- {% endblock %} -->
+                </div></div>
+        </div>
+    </body>
+</html>
+    
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+  
+}
+label{
+    color:#fff;
+}
+.hero{
+    width:100%;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    background-size: cover;
+    background-position: center;
+    position: relative;
+   
+}
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    display: i nline-block;
+    list-style: none;
+    margin: 5px 25px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.title{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    color:#fff;
+    {% comment %} color: transparent; {% endcomment %}
+    background-image: linear-gradient(#fff,#fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    {% comment %} animation: backcolor 5s linear infinite alternate; {% endcomment %}
+
+}
+@keyframes backcolor{
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.container{
+    top:35% ;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    position: absolute;
+}
+.upload-box{
+    font-size: 16px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    width: 350px;
+    outline: none;
+}
+::-webkit-file-upload-button{
+    color: white;
+    background: #206a5d;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px 1px #6b4559;
+    outline: none;    
+}
+::-webkit-file-upload-button:hover{
+    background: #438a5e;
+}
+.container .btn {
+    position: absolute;
+    top: 73%;
+    left: 120%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #088395;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .container .btn:hover {
+    background-color:white ;
+    color:black ;
+  }
+
+
+</style>

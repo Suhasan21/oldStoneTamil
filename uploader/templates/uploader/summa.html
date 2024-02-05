@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:disabled,
+  button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+body {
+    background-image: linear-gradient(to top, #ecedee 0%, #eceeef 75%, #e7e8e9 100%);
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    padding: 20px 0;
+}
+
+/* .container.gallery-container {
+    background-color:#d9b6b6;
+    color: #35373a;
+    min-height: 100vh;
+    width: 75%;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    background-color: blue;
+} */
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 25px auto;
+    color: #888;
+    font-size: 18px;
+}
+
+.tz-gallery {
+    padding: 40px;
+    width: 70%;
+    background-color: black;
+    margin: 5% 0 0 13% ;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    margin: 5%;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.tz-gallery img {
+    border-radius: 4px;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+img{
+    margin: 5%;
+}
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container.gallery-container {
+        border-radius: 0;
+    }
+}
+
+.row{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    /* padding-left: 20px; */
+}
+
+audio{
+    width: 150px;
+    height: 35px;
+    margin: -10% 0% 0% -25%;
+    padding-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="container gallery-container">
+
+        <h1 style="margin-top: 0.5%;">Character Prediction</h1>
+      
+        <p class="page-description text-center"></p>
+        
+        <div class="tz-gallery">
+      
+            <div class="row">
+              <!-- {%for i, j in zipped_data%} -->
+                <div class="col-sm-6 col-md-4">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <audio controls >
+                            <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                            <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                          
+                          </audio>
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <audio controls>
+                            <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                            <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                          
+                          </audio>
+
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <audio controls>
+                            <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                            <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                          
+                          </audio>
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <audio controls>
+                            <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                            <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                          
+                          </audio>
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <audio controls>
+                            <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                            <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                          
+                          </audio>
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <audio controls>
+                            <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                            <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                          
+                          </audio>
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        <img src="11.jpg" class="image_responsive" height="100px" width="100px">
+                        
+                        <!-- <p>{{ j }}</p> -->
+                        <audio controls>
+                          <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                          <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                        
+                        </audio>
+                </div>
+            
+            </div>
+      
+        </div>
+      
+      </div>
+      
+</body>
+</html>

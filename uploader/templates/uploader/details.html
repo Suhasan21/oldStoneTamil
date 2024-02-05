@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(media/mp3/im.jpg)">
+<style>
+    button:disabled,
+button[disabled]{
+border: 1px solid #999999;
+background-color: #cccccc;
+color: #666666;
+}
+
+body {
+background-image: linear-gradient(to top, #ecedee 0%, #eceeef 75%, #e7e8e9 100%);
+min-height: 100vh;
+font: normal 16px sans-serif;
+padding: 20px 0;
+}
+
+
+.gallery-container h1 {
+text-align: center;
+margin-top: 70px;
+font-family: 'Droid Sans', sans-serif;
+font-weight: bold;
+}
+
+.gallery-container p.page-description {
+text-align: center;
+max-width: 800px;
+margin: 25px auto;
+color: #888;
+font-size: 18px;
+}
+
+.tz-gallery {
+padding: 40px;
+width: 70%;
+background-color: rgb(221, 192, 192);
+background-color: transparent;
+margin: 5% 0 0 13% ;
+}
+
+.tz-gallery .lightbox img {
+width: 100%;
+margin: 5%;
+transition: 0.2s ease-in-out;
+box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.tz-gallery img {
+border-radius: 4px;
+}
+
+.baguetteBox-button {
+background-color: transparent !important;
+}
+
+img{
+margin: 5% 5% 2% 5%;
+}
+
+@media(max-width: 768px) {
+body {
+    padding: 0;
+}
+
+.container.gallery-container {
+    border-radius: 0;
+}
+}
+
+.row{
+width: 80%;
+height: 100%;
+display: flex;
+flex-direction: row;
+margin-left: 10%;
+/* padding-left: 20px; */
+flex-wrap: wrap;
+justify-content: space-between; 
+}
+
+.row img{
+    margin: 5%;
+}
+
+/* audio{
+    margin-top: -3%;
+
+} */
+</style>
+
+<div class="container gallery-container">
+
+  <h1 style="color:white">Character Prediction</h1>
+
+  <p class="page-description text-center"></p>
+  
+  <div class="tz-gallery">
+
+      <div class="row">
+        {%for i, j in zipped_data%}
+          <div class="col-sm-4 col-md-2">
+                  <img style="margin: 3%;" src="{{ MEDIA_ROOT }}/media/{{i}}" class="image_responsive" height="100px" width="100px">
+                  
+                  <p style="text-align: center;color: red;">{{ j }}</p>
+                  <audio controls style="width: 150px; margin-top: -5%; margin-left: -2%;"  >
+                    <source src="{{ path }}{{ j }}.ogg" type="audio/ogg">
+                    <source src="{{ path }}{{ j }}.mp3" type="audio/mpeg">
+                  
+                  </audio>
+          </div>
+          
+          {% endfor %}
+      </div>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
+
