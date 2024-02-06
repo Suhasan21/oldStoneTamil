@@ -32,7 +32,7 @@ blis==0.7.9
 cached-property==1.5.2
 cachetools==4.2.4
 catalogue==2.0.8
-certifi==2022.9.24
+certifi==2021.5.30
 cffi @ file:///C:/Windows/Temp/abs_6808y9x40v/croots/recipe/cffi_1659598653989/work
 charset-normalizer==2.1.0
 click==8.1.3
